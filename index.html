@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="a1">
+        <div class="a a11">
+            <div class="aa a111">
+                <input type="text" class="box">
+            </div>
+        </div>
+
+        <div class="a a12">
+            <div class="aa a121">
+                <button class="aaa">AC</button>
+            </div>
+        </div>
+
+        <div class="a a13">
+            <div class="aa a131">
+                <button class="aaa"><</button>
+            </div>
+        </div>
+
+        <div class="a a14">
+            <div class="aa a141">
+                <button class="aaa">/</button>
+            </div>
+        </div>
+
+        <div class="a a15">
+            <div class="aa a151">
+                <button class="aaa">*</button>
+            </div>
+        </div>
+
+        <div class="a a16">
+            <div class="aa a161">
+                <button class="aaa">9</button>
+            </div>
+        </div>
+
+        <div class="a a17">
+            <div class="aa a171">
+                <button class="aaa">8</button>
+            </div>
+        </div>
+
+        <div class="a a18">
+            <div class="aa a181">
+                <button class="aaa">7</button>
+            </div>
+        </div>
+
+
+        <div class="a a19">
+            <div class="aa a191">
+                <button class="aaa spl">-</button>
+            </div>
+        </div>
+
+        <div class="a a110">
+            <div class="aa a1101">
+                <button class="aaa">6</button>
+            </div>
+        </div>
+
+        <div class="a a111">
+            <div class="aa a1111">
+                <button class="aaa">5</button>
+            </div>
+        </div>
+
+        <div class="a a112">
+            <div class="aa a1121">
+                <button class="aaa">4</button>
+            </div>
+        </div>
+
+        <div class="a a113">
+            <div class="aa a1131">
+                <button class="aaa">3</button>
+            </div>
+        </div>
+
+        <div class="a a114">
+            <div class="aa a1141">
+                <button class="aaa">2</button>
+            </div>
+        </div>
+
+        <div class="a a115">
+            <div class="aa a1151">
+                <button class="aaa">1</button>
+            </div>
+        </div>
+
+        <div class="a a116">
+            <div class="aa a1161">
+                <button class="aaa spl">+</button>
+            </div>
+        </div>
+
+        <div class="a a117">
+            <div class="aa a1171">
+                <button class="aaa">=</button>
+            </div>
+        </div>
+
+        <div class="a a118">
+            <div class="aa a1181">
+                <button class="aaa">0</button>
+            </div>
+        </div>
+
+        <div class="a a119">
+            <div class="aa a1191">
+                <button class="aaa">.</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+
+        // for button 1
+
+        document.querySelector(".a1151").addEventListener("click",function pressedOne(){
+            document.querySelector(".box").value =  (document.querySelector(".box").value+"1").slice(0,10);
+        })
+
+        // for button 2
+
+        document.querySelector(".a1141").addEventListener("click",function pressedTwo(){
+            document.querySelector(".box").value =  (document.querySelector(".box").value+"2").slice(0,10);
+        })
+
+        // for button 3
+
+
+        document.querySelector(".a1131").addEventListener("click",function pressedThree(){
+            document.querySelector(".box").value =  (document.querySelector(".box").value+"3").slice(0,10);
+        })
+
+        // for button 4
+
+        document.querySelector(".a1121").addEventListener("click",function pressedFour(){
+            document.querySelector(".box").value =  (document.querySelector(".box").value+"4").slice(0,10);
+        })
+
+        // for button 5
+        
+        document.querySelector(".a1111").addEventListener("click",function pressedFive(){
+            document.querySelector(".box").value =  (document.querySelector(".box").value+"5").slice(0,10);
+        })
+
+
+        // for button 6
+
+        document.querySelector(".a1101").addEventListener("click",function pressedSix(){
+            document.querySelector(".box").value =  (document.querySelector(".box").value+"6").slice(0,10);
+        })
+
+        // for button 7
+
+        document.querySelector(".a181").addEventListener("click",function pressedSeven(){
+            document.querySelector(".box").value =  (document.querySelector(".box").value+"7").slice(0,10);
+        })
+
+        // for button 8
+
+        document.querySelector(".a171").addEventListener("click",function pressedEight(){
+            document.querySelector(".box").value =  (document.querySelector(".box").value+"8").slice(0,10);
+        })
+
+        // for button 9
+
+        document.querySelector(".a161").addEventListener("click",function pressedNine(){
+            document.querySelector(".box").value =  (document.querySelector(".box").value+"9").slice(0,10);
+        })
+
+        // for button 0
+
+        document.querySelector(".a1181").addEventListener("click",function pressedZero(){
+            document.querySelector(".box").value =  (document.querySelector(".box").value+"0").slice(0,10);
+        })
+        
+
+        // for button .
+
+        document.querySelector(".a1191").addEventListener("click",function pressedDecimalPoint(){
+            document.querySelector(".box").value =  (document.querySelector(".box").value+".").slice(0,10);
+        })
+
+        // for button AC
+
+        document.querySelector(".a121").addEventListener("click",function pressed_AC(){
+            document.querySelector(".box").value =  "";
+        })
+
+        // for button <
+
+        document.querySelector(".a131").addEventListener("click",function pressed_Back_Del(){
+            if((document.querySelector(".box").value).length === 0){
+                document.querySelector(".box").value = "";
+                console.log("function working fine");
+            }
+            else if((document.querySelector(".box").value).length > 0){
+
+                var inputBoxString = document.querySelector(".box").value;
+
+                document.querySelector(".box").value = (document.querySelector(".box").value).slice(0,((document.querySelector(".box").value).length-1));
+
+                console.log("function working fine");
+
+            }
+             
+        })
+
+        // for + button
+
+        document.querySelector(".a1161").addEventListener("click",function pressedPlus(){
+            document.querySelector(".box").value =  (document.querySelector(".box").value+"+").slice(0,10);
+        })
+
+        // for (-) button
+
+        document.querySelector(".a191").addEventListener("click",function pressedMinus(){
+            document.querySelector(".box").value =  (document.querySelector(".box").value+"-").slice(0,10);
+        })
+
+        // for * button
+
+        document.querySelector(".a151").addEventListener("click",function pressedMulti(){
+            document.querySelector(".box").value =  (document.querySelector(".box").value+"*").slice(0,10);
+        })
+
+        // for / button
+
+        document.querySelector(".a141").addEventListener("click",function pressedDivide(){
+            document.querySelector(".box").value =  (document.querySelector(".box").value+"/").slice(0,10);
+        })
+
+        // for button =
+
+        document.querySelector(".a1171").addEventListener("click", function pressed_equal_to(){
+            var operatorList = ["+","-","*","/"];
+    
+            if((operatorList.includes((document.querySelector(".box").value).slice(-1)) === true)){
+                console.log("wrong format");
+                alert("wrong format");
+            }
+            else{
+                document.querySelector(".box").value = eval(document.querySelector(".box").value);
+            }
+        })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

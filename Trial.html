@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+
+    <input type="text" class="result">
+    <br>
+    <br>
+    <button class="one">1</button>
+    <br>
+    <br>
+    <button class="two">2</button>
+    <br>
+    <br>
+    <button class="plus">+</button>
+    <br>
+    <br>
+    <button class="equalTo">=</button>
+    <br>
+    <br>
+    <button class="CE">CE</button>
+
+    <script>
+
+        document.querySelector(".one").addEventListener("click",function sumShow(){
+
+            document.querySelector(".result").value = document.querySelector(".result").value + document.querySelector(".one").innerHTML;
+
+        });
+
+        document.querySelector(".two").addEventListener("click",function sumShow1(){
+            document.querySelector(".result").value = document.querySelector(".result").value + document.querySelector(".two").innerHTML;
+
+        });
+
+        document.querySelector(".plus").addEventListener("click",function sumShow2(){
+            document.querySelector(".result").value = document.querySelector(".result").value + document.querySelector(".plus").innerHTML;
+
+        });
+
+        document.querySelector(".equalTo").addEventListener("click",function equalto(){
+            document.querySelector(".result").value = eval(document.querySelector(".result").value);
+
+        });
+
+        document.querySelector(".CE").addEventListener("click", function start(){
+            document.querySelector(".result").value = "";
+
+        });
+
+    
+    </script>
+    
+</body>
+</html>
