@@ -54,6 +54,8 @@ body{
     height: 90px;
     width: 45px;
     border-radius: 25%;
+    /* background-color: blue;
+    color: white; */
 
 }
 
@@ -63,6 +65,26 @@ body{
     border-radius: 10px;
     font-size: 30px;
     text-align: right;
+}
+
+.aaaAquamarine{
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    background-color: aquamarine;
+    color: aliceblue;
+
+}
+
+.spl1{
+
+    height: 90px;
+    width: 45px;
+    border-radius: 25%;
+    background-color: aquamarine;
+    color: aliceblue;
+
+
 }
 
 
